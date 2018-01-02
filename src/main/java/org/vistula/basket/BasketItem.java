@@ -3,6 +3,35 @@ package org.vistula.basket;
 public class BasketItem {
 
     private float price;
-    boolean ageRestrictedItem;
+    private boolean ageRestrictedItem;
+
+    public BasketItem() {
+
+    }
+
+    public BasketItem(float price, boolean ageRestrictedItem) {
+        this.price = price;
+        this.ageRestrictedItem = ageRestrictedItem;
+
+    }
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setAgeRestrictedItem(boolean ageRestrictedItem) {
+        this.ageRestrictedItem = ageRestrictedItem;
+    }
+
+    public boolean getAgeRestrictedItem() {
+        return ageRestrictedItem;
+    }
+    //  3. Napisac metode, która zwraca całkowitą cenę wszystkich produktów do koszyka + testy
+
+
+
 
 }
