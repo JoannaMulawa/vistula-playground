@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.vistula.basket.BasketItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class CustomerTest {
@@ -35,6 +36,16 @@ public class CustomerTest {
         bianka.setBasket(myBasket);
         Assertions.assertThat(bianka.basketTotal()).isEqualTo(40);
 
+    }
+    @Test
+    public void testAddBasketItem_forNotAdult() {
+        Customer magda = new Customer("Magda", "Wlodarczyk", 8);
+        ArrayList<BasketItem> yourBasket = new ArrayList<BasketItem>();
+        magda.setBasket(yourBasket);
+        BasketItem cigaretess = new BasketItem(15,true);
+        magda.addBasketItem(cigaretess);
+        List<BasketItem> basket = magda.getBasket();
+        assert basket.size() == 0;
     }
 
 

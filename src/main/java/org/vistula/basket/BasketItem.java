@@ -29,7 +29,7 @@ public class BasketItem {
     public boolean getAgeRestrictedItem() {
         return ageRestrictedItem;
     }
-    //  3. Napisac metode, która zwraca całkowitą cenę wszystkich produktów do koszyka + testy
+    //
 
 
 

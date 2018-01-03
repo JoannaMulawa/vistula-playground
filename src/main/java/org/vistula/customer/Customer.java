@@ -54,7 +54,7 @@ public class Customer {
     public List<BasketItem> getBasket() {
         return basket;
     }
-    // 2. Napisać metodę, która zwraca true jeżeli wiek klienta jest większy lub równy 18 + testy
+
 
     public boolean isAdult() {
 
@@ -77,5 +77,18 @@ public class Customer {
         return sum;
     }
 
+    public void addBasketItem(BasketItem item) {
+
+        boolean isAdult = this.isAdult();
+        boolean ageRestrictedItem = item.getAgeRestrictedItem();
+        if(ageRestrictedItem == true) {
+            if(isAdult == true) {
+                basket.add(item);
+            }
+        }else{
+            basket.add(item);
+        }
+
+    }
 
 }
